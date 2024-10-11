@@ -1,5 +1,5 @@
 # Ignorăm fișierele de mediu
-.env
+/includes/.env
 composer.json
 composer.lock
 ca.pem
