@@ -1,0 +1,6 @@
+# Ignorăm fișierele de mediu
+.env
+
+# Ignorăm directoarele de dependințe
+vendor/
+.idea/
