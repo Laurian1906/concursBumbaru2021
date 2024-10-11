@@ -1,5 +1,9 @@
 # Ignorăm fișierele de mediu
-.env
+/includes/.env
+composer.json
+composer.lock
+ca.pem
+/includes/conectare.php
 
 # Ignorăm directoarele de dependințe
 vendor/
