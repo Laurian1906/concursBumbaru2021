@@ -1,5 +1,7 @@
 # Ignorăm fișierele de mediu
 .env
+composer.json
+composer.lock
 
 # Ignorăm directoarele de dependințe
 vendor/

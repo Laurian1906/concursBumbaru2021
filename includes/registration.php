@@ -1,44 +1,56 @@
 <?php
-$error = NULL;
+require 'conectare.php'; // Conectarea la baza de date
+
+// $error = ""; // Inițializează variabila pentru erori
 
 if (isset($_POST['submit'])) {
-    //Conectare la baza de date
-    $mysqli = new MySQLi('localhost', 'root', '', 'database');
+    // Obține datele din formular
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+    $rpassword = trim($_POST['rpassword']);
+    //$email = trim($_POST['email']); // Dacă folosești email-ul, adaugă-l și aici
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $rpassword = $_POST['rpassword'];
-    //$email = $_POST['email'];
-
-    $query_username = $mysqli->query("SELECT * FROM angajati WHERE username = '$username'");
-
-
-    if (empty($username) or empty($password) or empty($rpassword)) {
+    // Verifică dacă toate câmpurile sunt completate
+    if (empty($username) || empty($password) || empty($rpassword)) {
         $error = "Please fill in all fields.";
-    } elseif ($query_username->num_rows != 0) {
-        $error = "That username is already taken.";     // taken username error
-    } elseif ($rpassword != $password) {
-        $error = "Your passwords don't match.";
-    } elseif (strlen($password < 6)) {
-        $error = "Your password must be at least 5 characters.";
-    } else {
-        //Encrypt the password
-        $password = md5($password);
-        //Inserarea contului in baza de date
-        $insert = $mysqli->query("INSERT INTO angajati(username,password) 
-        VALUES('$username','$password')");
+    } 
+    // Verifică dacă username-ul există deja în baza de date
+    else {
+        // Pregătește interogarea pentru a preveni SQL injection
+        $query_username = $db->prepare("SELECT * FROM Angajati WHERE Username = :username");
+        $query_username->bindParam(':username', $username);
+        $query_username->execute();
 
-        if ($insert != TRUE) {
-            $error = "There was a problem <br />";
-            $error .= $mysqli->error;
-        } else {
-            $error = "You have been registered!";
+        if ($query_username->rowCount() > 0) {
+            $error = "That username is already taken.";
+        } 
+        // Verifică dacă parolele se potrivesc
+        elseif ($password !== $rpassword) {
+            $error = "Your passwords don't match.";
+        } 
+        // Verifică lungimea parolei (cel puțin 6 caractere)
+        elseif (strlen($password) < 6) {
+            $error = "Your password must be at least 6 characters.";
+        } 
+        // Dacă toate condițiile sunt îndeplinite, se trece la inserarea în baza de date
+        else {
+            // Hash parolei folosind password_hash (mai sigur decât md5)
+            $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+
+            // Pregătește interogarea de inserare
+            $insert_query = $db->prepare("INSERT INTO Angajati (Username, Parola) VALUES (:username, :password)");
+            $insert_query->bindParam(':username', $username);
+            $insert_query->bindParam(':password', $hashed_password);
+
+            // Execută inserarea și verifică dacă a avut succes
+            if ($insert_query->execute()) {
+                $error = "You have been registered successfully!";
+            } else {
+                $error = "There was a problem with registration. Please try again later.";
+            }
         }
     }
-} //Close main if
-?>
+}
 
-
-<?php
-echo $error;
+// echo $error;
 ?>
