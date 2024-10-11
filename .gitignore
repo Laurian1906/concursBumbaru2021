@@ -2,7 +2,7 @@
 .env
 composer.json
 composer.lock
-/include/ca.pem
+ca.pem
 
 # Ignorăm directoarele de dependințe
 vendor/
