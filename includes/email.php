@@ -12,7 +12,6 @@ $smtpPort = $_ENV['SMTP_PORT'];
 $smtpUser = $_ENV['SMTP_USER'];
 $smtpPass = $_ENV['SMTP_PASS'];
 
-
 require 'conectare.php'; // Include fișierul care gestionează conexiunea la baza de date
 
 // Initialize error variable
