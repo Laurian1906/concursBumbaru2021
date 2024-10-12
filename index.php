@@ -9,17 +9,17 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.php">
+    <link rel="stylesheet" href="../public/css/style.php">
     <title>BLM - CONCURS SEVERIN BUMBARU</title>
 </head>
 
 <body>
     <header>
-        <span class="logo"><img class="logo" src="images/logo4.png"></img></span>
+        <span class="logo"><img class="logo" src="../public/images/logo4.png"></img></span>
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="../public/contact.php">Contact</a></li>
             </ul>
         </nav>
     </header>

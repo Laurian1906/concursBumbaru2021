@@ -112,12 +112,12 @@ try {
 }
 
 // Se adauga date in tabelul Angajati
-try {
-    $db->query("INSERT INTO Angajati (Numele, Prenumele, Username, Parola, Teamleader, Adminn) VALUES ('Popescu', 'Ion', 'popescu.ion', 'parola1234', 0, 0)");
-    echo "Interogare facuta cu succes in tabelul Angajati<br>";
-} catch (PDOException $e) {
-    echo "Error:" . $e->getMessage() . "<br>";
-}
+// try {
+//     $db->query("INSERT INTO Angajati (Numele, Prenumele, Email, Teamleader, Adminn) VALUES ('Popescu', 'Ion', laur.laury@gmail.com, 0, 0)");
+//     echo "Interogare facuta cu succes in tabelul Angajati<br>";
+// } catch (PDOException $e) {
+//     echo "Error:" . $e->getMessage() . "<br>";
+// }
 
 $db = null;
 ?>

@@ -23,13 +23,13 @@ if (isset($_POST['submit'])) {
 
     // Verificăm dacă email-ul este completat
     if (empty($email)) {
-        header("Location: ../contact.php?info=error");
+        header("Location: ../public/contact.php?info=error");
         exit;
     }
 
     // Validate email format
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: ../contact.php?info=invalid_email");
+        header("Location: ../public/contact.php?info=invalid_email");
         exit;
     }
 
@@ -69,21 +69,21 @@ if (isset($_POST['submit'])) {
             // Conținutul emailului
             $mail->isHTML(true); // Setează formatul emailului ca HTML
             $mail->Subject = "Account Creation";
-            $mail->Body = "Click on this <a href='../includes/registration.php'>link</a> to acces the registration page.";
+            $mail->Body = "Click on this <a href='https://concurs-bumbaru.golgotagalati.ro/includes/registration.php'>link</a> to access the registration page.";
 
             // Trimiterea emailului
             if ($mail->send()) {
-                header("Location: ../contact.php?info=emailSent");
+                header("Location: ../public/contact.php?info=emailSent");
             } else {
                 $error = "Email sending failed: " . $mail->ErrorInfo;
-                header("Location: ../contact.php?error=sendEmailFailed");
+                header("Location: ../public/contact.php?error=sendEmailFailed");
             }
         } elseif ($username != 0) {
             $error = "This email is already associated with a registered account.";
-            header("Location: ../contact.php?info=alreadyAsossiatedEmail");
+            header("Location: ../public/contact.php?info=alreadyAsossiatedEmail");
         } else {
             $error = "This email is not registered in the database.";
-            header("Location: ../contact.php?info=emailNotInDatabase");
+            header("Location: ../public/contact.php?info=emailNotInDatabase");
         }
 
     } catch (PDOException $e) {

@@ -1,0 +1,68 @@
+[11-Oct-2024 21:37:42 UTC] PHP Warning:  require(../vendor/autoload.php): Failed to open stream: No such file or directory in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php on line 3
+[11-Oct-2024 21:37:42 UTC] PHP Warning:  require(../vendor/autoload.php): Failed to open stream: No such file or directory in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php on line 3
+[11-Oct-2024 21:37:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php on line 3
+[11-Oct-2024 21:45:46 UTC] PHP Warning:  Undefined variable $db in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php on line 38
+[11-Oct-2024 21:45:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php:38
+Stack trace:
+#0 {main}
+  thrown in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php on line 38
+[11-Oct-2024 21:49:22 UTC] PHP Warning:  Undefined variable $db in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php on line 38
+[11-Oct-2024 21:49:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php:38
+Stack trace:
+#0 {main}
+  thrown in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php on line 38
+[11-Oct-2024 21:51:37 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 21:51:37 UTC] PHP Warning:  Undefined variable $db in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php on line 38
+[11-Oct-2024 21:51:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php:38
+Stack trace:
+#0 {main}
+  thrown in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/email.php on line 38
+[11-Oct-2024 21:53:51 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 21:54:04 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 21:55:58 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 21:56:31 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 21:56:41 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 21:58:32 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:00:52 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:01:20 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:02:05 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:02:39 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:02:51 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:03:07 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:04:03 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:04:46 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:04:53 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:04:59 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:09:21 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:10:24 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:11:06 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:11:13 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:11:21 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:11:52 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:12:22 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:39:13 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[11-Oct-2024 22:43:40 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[12-Oct-2024 08:34:50 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[12-Oct-2024 08:41:41 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[12-Oct-2024 08:41:41 UTC] PHP Warning:  Undefined variable $db in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/login.php on line 18
+[12-Oct-2024 08:41:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/login.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/login.php on line 18
+[12-Oct-2024 08:49:44 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[12-Oct-2024 08:49:44 UTC] PHP Warning:  Undefined variable $db in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/login.php on line 18
+[12-Oct-2024 08:49:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/login.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/login.php on line 18
+[12-Oct-2024 08:50:18 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[12-Oct-2024 08:50:56 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
+[12-Oct-2024 08:51:42 UTC] Array
+(
+    [id_loc] => 2
+)
+
+[12-Oct-2024 08:53:40 UTC] PHP Warning:  Undefined array key "HOSTDB" in /home/golgotag/public_html/concurs-bumbaru.golgotagalati.ro/includes/conectare.php on line 10
