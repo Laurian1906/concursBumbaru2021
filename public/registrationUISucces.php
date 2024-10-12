@@ -7,6 +7,6 @@
 </head>
 <body>
     <h1>Registration successful!</h1>
-    <p>Thank you for registering. You can now <a href="login.php">log in</a>.</p>
+    <p>Thank you for registering. You can now <a href="../includes/login.php">log in</a>.</p>
 </body>
 </html>

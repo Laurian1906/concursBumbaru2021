@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    header("Location: ../loggedin.php");
+    header("Location: ../includes/loggedin.php");
     exit();
 }
 ?>
@@ -13,17 +13,17 @@ if (!isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.php">
+    <link rel="stylesheet" href="../public/css/style.php">
     <title>BLM - CONCURS SEVERIN BUMBARU</title>
 </head>
 
 <body>
     <header onclick="close()">
-        <span class="logo"><img class="logo" src="../images/logo4.png" alt="Logo"></span>
+        <span class="logo"><img class="logo" src="../public/images/logo4.png" alt="Logo"></span>
         <nav>
             <ul>
                 <li><a href="../index.php">Home</a></li>
-                <li><a href="../contact.php">Contact</a></li>
+                <li><a href="../public/contact.php">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -104,7 +104,7 @@ if (!isset($_SESSION['username'])) {
     <div>
         <div id="formWrapper" class="form-wrapper">
             <form class="loggedInForm" action="../includes/logout.php" method="GET">
-                <img class="profil" src="../images/profil.png" alt="Profile">
+                <img class="profil" src="../public/images/profil.png" alt="Profile">
                 <h1 class="bunvenit"> Bun venit, <?php echo htmlspecialchars($_SESSION['username']); ?>! </h1>
                 <input id="reserve" onclick="pressed()" class="loggedinBook" type="button" value="Reserve">
                 <input class="loggedinLogin" type="submit" value="Log Out">
@@ -134,7 +134,7 @@ if (!isset($_SESSION['username'])) {
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../scripts/main.js"></script>
+    <script src="../public/js/main.js"></script>
 </body>
 
 </html>

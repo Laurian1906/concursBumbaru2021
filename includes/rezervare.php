@@ -59,7 +59,7 @@ switch ($id_loc) {
 
 try {
     // Obține ID_ANGAJAT pe baza username-ului
-    $stmt = $db->prepare("SELECT ID_ANGAJAT FROM Angajati WHERE Username = :user");
+    $stmt = $db->prepare("SELECT ID_ANGAJAT FROM golgotag_bumbaru.Angajati WHERE Username = :user");
     $stmt->bindParam(':user', $user);
     $stmt->execute();
     $id_angajat = $stmt->fetchColumn();
@@ -71,7 +71,7 @@ try {
     }
 
     // Pregătește query-ul de inserare
-    $sql = "INSERT INTO defaultdb.Rezervari (ID_ANGAJAT, Data_rezervare, Momentul_zilei, Nr_loc, Nr_camera, ID_LOC) 
+    $sql = "INSERT INTO golgotag_bumbaru.Rezervari (ID_ANGAJAT, Data_rezervare, Momentul_zilei, Nr_loc, Nr_camera, ID_LOC) 
             VALUES (:id_angajat, :data_rezervare, :momentulZilei, :nr_loc, :nr_camera, :id_loc)";
     $stmt_insert = $db->prepare($sql);
     $stmt_insert->bindParam(':id_angajat', $id_angajat);
@@ -87,7 +87,7 @@ try {
 
     if ($rowsAffected > 0) {
         // Actualizează locurile dacă inserarea a avut succes
-        $db->prepare("UPDATE Locuri SET Disponibilitate = 0 WHERE ID_LOC = :id_loc")->execute([':id_loc' => $id_loc]);
+        $db->prepare("UPDATE golgotag_bumbaru.Locuri SET Disponibilitate = 0 WHERE ID_LOC = :id_loc")->execute([':id_loc' => $id_loc]);
         $db->prepare("UPDATE Camera SET Nr_locuri = Nr_locuri - 1 WHERE ID_Camera = :nr_camera")->execute([':nr_camera' => $nr_camera]);
         echo json_encode(['status' => 'success', 'message' => 'Rezervare efectuată cu succes.']);
         header("Location: ../includes/loggedin.php?info=rezervat");
@@ -105,7 +105,7 @@ function reangajeazaLocuri($db)
     $momentul_curent = time();
 
     // Găsește rezervările expirate
-    $sql_check_expirari = "SELECT * FROM Rezervari WHERE UNIX_TIMESTAMP(Data_rezervare) + :expirare_timp < :momentul_curent";
+    $sql_check_expirari = "SELECT * FROM golgotag_bumbaru.Rezervari WHERE UNIX_TIMESTAMP(Data_rezervare) + :expirare_timp < :momentul_curent";
     $stmt_check_expirari = $db->prepare($sql_check_expirari);
     $stmt_check_expirari->bindParam(':expirare_timp', $expirare_timp);
     $stmt_check_expirari->bindParam(':momentul_curent', $momentul_curent);
@@ -114,13 +114,13 @@ function reangajeazaLocuri($db)
 
     foreach ($rezervari_expirate as $rezervare) {
         // Actualizează disponibilitatea locului
-        $sql_update_loc = "UPDATE Locuri SET Disponibilitate = 1 WHERE ID_LOC = :id_loc";
+        $sql_update_loc = "UPDATE golgotag_bumbaru.Locuri SET Disponibilitate = 1 WHERE ID_LOC = :id_loc";
         $stmt_update_loc = $db->prepare($sql_update_loc);
         $stmt_update_loc->bindParam(":id_loc", $rezervare['ID_LOC']);
         $stmt_update_loc->execute();
 
         // Actualizează numărul de locuri din cameră
-        $sql_update_camera = "UPDATE Camera SET Nr_locuri = Nr_locuri + 1 WHERE ID_Camera = :nr_camera";
+        $sql_update_camera = "UPDATE golgotag_bumbaru.Camera SET Nr_locuri = Nr_locuri + 1 WHERE ID_Camera = :nr_camera";
         $stmt_update_camera = $db->prepare($sql_update_camera);
         $stmt_update_camera->bindParam(":nr_camera", $rezervare['Nr_camera']);
         $stmt_update_camera->execute();

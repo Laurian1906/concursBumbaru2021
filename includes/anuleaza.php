@@ -48,7 +48,7 @@ try {
                 echo json_encode(['status' => 'error', 'message' => 'Eroare: actualizarea disponibilității locului sau a camerei a eșuat.']);
             }
 
-            header("Location: loggedin.php?info=rezervareAnulata");
+            header("Location: ../includes/loggedin.php?info=rezervareAnulata");
         } else {
             echo "Eroare: rezervarea nu a fost ștearsă.";
         }
